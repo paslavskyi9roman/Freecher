@@ -9,6 +9,7 @@ export class PostComponent implements OnInit {
   title: string = 'Title'
   text: string = 'Lorem text'
   author: string = 'Nickname'
+  
   constructor() { }
 
   ngOnInit(): void {
