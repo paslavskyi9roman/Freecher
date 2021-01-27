@@ -1,11 +1,26 @@
 .post {
-  padding: 0.5rem 1rem;
   margin-bottom: 3rem;
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 11px 12px 25px 1px rgba(0, 0, 0, 0.61);
-}
-
-h1 {
-  margin-bottom: 0.2rem;
+  height: 300px;
+  overflow: hidden;
+  .title {
+    background-color: rgb(223, 223, 223);
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      margin-bottom: 0.2rem;
+    }
+    span {
+      color: rgb(100, 100, 100);
+    }
+  }
+  .body {
+    padding: 1rem;
+    p {
+      font-size: 1.3rem;
+    }
+  }
 }

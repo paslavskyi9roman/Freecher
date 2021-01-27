@@ -5,9 +5,13 @@
     [attr.data-index]="i"
   >
     <a [title]="post.title" href="#">
-      <h1>{{ post.title }}</h1>
-      <p>Posted by: {{ post.author }}</p>
-      <p>{{ post.text }}</p></a
-    >
+      <div class="title">
+        <h1>{{ post.title }}</h1>
+        <span>Posted by: {{ post.author }}</span>
+      </div>
+      <div class="body">
+        <p>{{ post.text }}</p>
+      </div>
+    </a>
   </div>
 </ul>
