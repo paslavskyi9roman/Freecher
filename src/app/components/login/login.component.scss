@@ -1,0 +1,49 @@
+.login {
+  margin: 0 auto;
+  width: 400px;
+  display: flex;
+
+  flex-direction: column;
+  padding: 3rem;
+  font-family: Helvetica;
+  h2 {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 1.8rem;
+  }
+  p {
+    margin-top: 1rem;
+  }
+  a {
+    font-weight: bold;
+  }
+
+  label {
+    font-size: 1.2rem;
+    color: rgb(75, 75, 75);
+  }
+
+  input {
+    width: 100%;
+    height: 2.5rem;
+    margin: 0.5rem 0 1.5rem 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    &:focus {
+      outline: none;
+      border-color: rgb(28, 145, 255);
+    }
+  }
+
+  button {
+    background-color: rgb(28, 145, 255);
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    font-weight: bold;
+  }
+}
