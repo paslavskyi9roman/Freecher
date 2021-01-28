@@ -1,0 +1,47 @@
+.add-post {
+  display: flex;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    width: 700px;
+    height: auto;
+    border: none;
+    padding: 2rem;
+    font-size: 1.2rem;
+    &:focus {
+      outline: none;
+    }
+  }
+  #title {
+    background-color: #ccc;
+    font-size: 1.5rem;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  button {
+    background-color: rgb(28, 145, 255);
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 1.2rem;
+    margin: 2rem 1rem;
+    border: none;
+    font-weight: bold;
+  }
+  #cancel {
+    background-color: rgb(185, 185, 185);
+  }
+}
