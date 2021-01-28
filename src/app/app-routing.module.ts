@@ -13,7 +13,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'create-post', component: CreatePostComponent},
-  {path: 'post', component: ViewPostComponent},
+  {path: 'post/:id', component: ViewPostComponent},
   {path: '**', component: PageNotFoundComponent},
 
 ]
