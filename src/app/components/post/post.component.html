@@ -1,17 +1,15 @@
-<ul>
-  <div
-    class="post"
-    *ngFor="let post of posts; let i = index"
-    [attr.data-index]="i"
-  >
-    <a [title]="post.title" [routerLink]="['/post/', i]">
-      <div class="title">
-        <h1>{{ post.title }}</h1>
-        <span>Posted by: {{ post.author }}</span>
-      </div>
-      <div class="body">
-        <p>{{ post.text }}</p>
-      </div>
-    </a>
-  </div>
-</ul>
+<div
+  class="post"
+  *ngFor="let post of posts; let i = index"
+  [attr.data-index]="i"
+>
+  <a [title]="post.title" [routerLink]="['/post/', i]">
+    <div class="title">
+      <h1>{{ post.title }}</h1>
+      <span>Posted by: {{ post.author }}</span>
+    </div>
+    <div class="body">
+      <p>{{ post.text }}</p>
+    </div>
+  </a>
+</div>
