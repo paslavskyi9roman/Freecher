@@ -2,7 +2,7 @@
   margin: 0 auto;
   width: 400px;
   display: flex;
-
+  height: 800px;
   flex-direction: column;
   padding: 3rem;
   font-family: Helvetica;
@@ -16,6 +16,9 @@
   }
   a {
     font-weight: bold;
+  }
+  a:hover {
+    color: rgb(28, 145, 255);
   }
 
   label {
