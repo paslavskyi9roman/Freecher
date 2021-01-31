@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PostComponent } from './components/post/post.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { MainScreenComponent } from './components/main-screen/main-screen.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { CreatePostComponent } from './components/create-post/create-post.component';
@@ -22,7 +21,6 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     HeaderComponent,
     PostComponent,
     FooterComponent,
-    MainScreenComponent,
     LoginComponent,
     RegisterComponent,
     CreatePostComponent,

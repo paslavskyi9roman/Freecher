@@ -6,7 +6,7 @@ import { POSTS } from '../../mock-posts'
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent implements OnInit {
-  posts = POSTS
+  posts = POSTS;
 
   constructor() { }
 
