@@ -6,9 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  userLogged = false
 
-  login() {
-    console.log('logged')
+  userLoggedHandler() {
+    this.userLogged = true
   }
 
   constructor() { }

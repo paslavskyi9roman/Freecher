@@ -15,7 +15,10 @@
       id="password"
       placeholder="Enter password"
     /><br />
-    <button (click)="login()" routerLink="/">Sign In</button>
+    <div class="buttons">
+      <button routerLink="/" (click)="userLoggedHandler()">Sign In</button>
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    </div>
     <p>New user ? <a routerLink="/register">Register</a></p>
   </form>
 </div>
