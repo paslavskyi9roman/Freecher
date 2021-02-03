@@ -5,16 +5,5 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
-  userLogged = false
-
-  userLoggedHandler() {
-    this.userLogged = true
-  }
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class LoginComponent{
 }

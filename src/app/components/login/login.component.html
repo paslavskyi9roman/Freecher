@@ -1,22 +1,39 @@
 <div class="login">
   <h2>Sign In</h2>
-  <form action="">
+  <form>
     <label for="email">Email Address</label>
     <input
-      type="email"
+      required
+      minlength="4"
+      ngModel
       name="email"
+      #email="ngModel"
+      type="email"
       id="email"
       placeholder="Enter email"
-    /><br />
+    />
+    <div class="error" *ngIf="email.touched && !email.valid">
+      Email is required and should be at least 4 characters
+    </div>
+    <br />
+    <br />
     <label for="password">Password</label>
     <input
-      type="password"
+      required
+      minlength="6"
+      ngModel
       name="password"
+      #password="ngModel"
+      type="password"
       id="password"
       placeholder="Enter password"
-    /><br />
+    />
+    <div class="error" *ngIf="password.touched && !password.valid">
+      Password is required and should be at least 6 characters
+    </div>
+    <br />
     <div class="buttons">
-      <button routerLink="/" (click)="userLoggedHandler()">Sign In</button>
+      <button type="submit" routerLink="/">Sign In</button>
       <div class="g-signin2" data-onsuccess="onSignIn"></div>
     </div>
     <p>New user ? <a routerLink="/register">Register</a></p>
