@@ -46,7 +46,11 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 0.5rem 1.2rem;
+    margin-right: 6px;
     border: none;
     font-weight: bold;
+  }
+  .buttons {
+    display: flex;
   }
 }

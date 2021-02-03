@@ -29,7 +29,11 @@
       id="password"
       placeholder="Confirm password"
     /><br />
-    <button routerLink="/">Sign Up</button>
+    <div class="buttons">
+      <button routerLink="/">Sign Up</button>
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    </div>
+
     <p>Already have an account ? <a routerLink="/login">Sign In</a></p>
   </form>
 </div>
