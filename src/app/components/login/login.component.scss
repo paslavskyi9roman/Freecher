@@ -43,7 +43,7 @@
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 0.5rem 1.2rem;
+    padding: 0.6rem 1.2rem;
     margin-right: 8px;
     border: none;
     font-weight: bold;
@@ -57,7 +57,12 @@
 .error {
   padding: 0.5rem;
   color: rgb(155, 0, 0);
+  width: 100%;
   border: transparent;
   border-radius: 5px;
   background-color: rgb(255, 192, 173);
+}
+
+.form-group {
+  margin: 1rem 0;
 }
