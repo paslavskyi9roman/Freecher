@@ -12,7 +12,10 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { CreatePostComponent } from './components/create-post/create-post.component';
 import { ViewPostComponent } from './components/view-post/view-post.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { PasswordPatternDirective } from './directives/password-pattern.directive';
+import { MatchPasswordDirective } from './directives/match-password.directive';
+import { ValidateUserNameDirective } from './directives/validate-user-name.directive';
+
 
 
 @NgModule({
@@ -25,6 +28,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     RegisterComponent,
     CreatePostComponent,
     ViewPostComponent,
+    PasswordPatternDirective,
+    MatchPasswordDirective,
+    ValidateUserNameDirective,
   ],
   imports: [
     BrowserModule,
