@@ -5,7 +5,7 @@
     class="form"
     #registerForm="ngForm"
     [appMatchPassword]="['password', 'confirmPassword']"
-    (ngSubmit)="registerForm.form.valid && onSubmit()"
+    (ngSubmit)="(registerForm.form.valid)"
     novalidate
   >
     <div class="form-group">
@@ -119,11 +119,15 @@
       </div>
     </div>
     <div class="buttons">
-      <div class="form-group">
-        <button type="submit" class="btn btn-success">Sign Up</button>
-      </div>
-
-      <div class="g-signin2 form-group" data-onsuccess="onSignIn"></div>
+      <button
+        type="submit"
+        (click)="ngAuthService.SignUp(email.value, password.value)"
+      >
+        <p>Sign Up</p>
+      </button>
+      <button class="g-signin2" (click)="ngAuthService.GoogleAuth()">
+        Log in with Google
+      </button>
     </div>
 
     <p>Already have an account ? <a routerLink="/login">Sign In</a></p>
