@@ -1,20 +1,12 @@
 <header>
   <h1><a routerLink="/">Feecher</a></h1>
   <nav>
-    <ul>
-      <h3><a routerLink="/create-post">Add Post</a></h3>
+    <ul *ngIf="!ngAuthService.userState">
       <h3><a routerLink="/login">Login</a></h3>
-      <h3>
-        <a href="#" onclick="signOut();">Sign out</a>
-        <script>
-          function signOut() {
-            var auth2 = gapi.auth2.getAuthInstance();
-            auth2.signOut().then(function () {
-              console.log("User signed out.");
-            });
-          }
-        </script>
-      </h3>
+    </ul>
+    <ul *ngIf="ngAuthService.userState as user">
+      <h3><a routerLink="/create-post">Add Post</a></h3>
+      <h3><a (click)="ngAuthService.SignOut()">Sign Out</a></h3>
     </ul>
   </nav>
 </header>
