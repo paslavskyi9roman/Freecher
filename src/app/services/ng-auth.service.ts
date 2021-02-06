@@ -41,7 +41,7 @@ export class NgAuthService {
       return this.afAuth.signInWithEmailAndPassword(email, password)
         .then((result) => {
           this.ngZone.run(() => {
-            this.router.navigate(['dashboard']);
+            this.router.navigate(['']);
           });
           this.SetUserData(result.user);
         }).catch((error) => {
@@ -88,7 +88,7 @@ export class NgAuthService {
       return this.afAuth.signInWithPopup(provider)
       .then((result) => {
          this.ngZone.run(() => {
-            this.router.navigate(['dashboard']);
+            this.router.navigate(['']);
           })
         this.SetUserData(result.user);
       }).catch((error) => {
@@ -113,7 +113,7 @@ export class NgAuthService {
     SignOut() {
       return this.afAuth.signOut().then(() => {
         localStorage.removeItem('user');
-        this.router.navigate(['sign-in']);
+        this.router.navigate(['login']);
       })
     }  
 }
