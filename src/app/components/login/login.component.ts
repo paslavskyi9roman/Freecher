@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../../models/user'
+import { NgAuthService } from "../../services/ng-auth.service";
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent{
+export class LoginComponent implements OnInit {
   userModal = new User();
 
-  constructor() { }
+  constructor(
+    public ngAuthService: NgAuthService
+  ) { }
 
-  onSubmit() {
-    alert('Form Submitted succesfully!!!\n Check the values in browser console.');
-    console.table(this.userModal);
-  }
+  ngOnInit() { }
+
 }

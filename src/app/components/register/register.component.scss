@@ -11,6 +11,7 @@
     margin: 2rem 0;
     font-size: 1.8rem;
   }
+
   a {
     font-weight: bold;
   }
@@ -40,13 +41,17 @@
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 0.6rem 1.2rem;
     margin-right: 8px;
+    margin-bottom: 1rem;
     border: none;
     font-weight: bold;
+    p {
+      padding: 0.5rem 1rem;
+    }
   }
   .buttons {
     display: flex;
+    margin-top: 1.5rem;
   }
 }
 
@@ -61,4 +66,8 @@
 
 .form-group {
   margin: 1rem 0;
+}
+
+span {
+  margin-bottom: 1rem;
 }

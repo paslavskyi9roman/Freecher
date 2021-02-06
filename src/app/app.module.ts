@@ -16,7 +16,11 @@ import { PasswordPatternDirective } from './directives/password-pattern.directiv
 import { MatchPasswordDirective } from './directives/match-password.directive';
 import { ValidateUserNameDirective } from './directives/validate-user-name.directive';
 
-
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireAuthModule } from "@angular/fire/auth";
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
+import { NgAuthService } from "./services/ng-auth.service";
 
 @NgModule({
   declarations: [
@@ -37,8 +41,11 @@ import { ValidateUserNameDirective } from './directives/validate-user-name.direc
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
   ],
-  providers: [],
+  providers: [NgAuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
