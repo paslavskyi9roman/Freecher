@@ -1,10 +1,13 @@
 <div class="post" *ngFor="let post of posts" [attr.data-index]="post.id">
-  <a [title]="post.title" [routerLink]="['/post/', post.id]">
+  <a [title]="post.title">
     <div class="title">
-      <h1>{{ post.title }}</h1>
-      <span>Posted by: {{ post.author }}</span>
+      <h1 [routerLink]="['/post/', post.id]">{{ post.title }}</h1>
+      <div class="title-grop">
+        <span>Posted by: {{ post.author }}</span>
+        <span (click)="removePost(post)" class="delete">Delete post</span>
+      </div>
     </div>
-    <div class="body">
+    <div class="body" [routerLink]="['/post/', post.id]">
       <p>{{ post.text }}</p>
     </div></a
   >

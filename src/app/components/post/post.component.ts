@@ -22,5 +22,5 @@ export class PostComponent implements OnInit {
     });  
   }
 
-  
+  removePost = post => this.postService.deletePost(post);
 }

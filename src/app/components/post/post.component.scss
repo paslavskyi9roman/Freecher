@@ -11,6 +11,13 @@
     padding: 0.5rem 1rem;
     display: flex;
     justify-content: space-between;
+    .title-grop {
+      display: flex;
+      flex-direction: column;
+      .delete {
+        color: rgb(145, 12, 12);
+      }
+    }
     h1 {
       margin-bottom: 0.2rem;
     }
