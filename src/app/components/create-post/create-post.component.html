@@ -1,11 +1,17 @@
 <div class="add-post">
-  <form action="">
+  <form [formGroup]="postForm" (ngSubmit)="onSubmit()" novalidate>
     <div class="wraper"></div>
-    <input type="text" id="title" placeholder="Enter Post Title" /> <br />
-    <input type="text" id="text" placeholder="Click here to start typing" />
+    <input type="text" id="title" placeholder="Enter Post Title" required />
+    <br />
+    <input
+      type="text"
+      id="text"
+      placeholder="Click here to start typing"
+      required
+    />
     <br />
     <div class="buttons">
-      <button (click)="addPost()">post</button>
+      <button type="submit" [disabled]="!postForm.valid">post</button>
       <button id="cancel" routerLink="/">cancel</button>
     </div>
   </form>

@@ -1,16 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { POSTS } from '../../mock-posts'
+import { PostService } from '../../services/post.service';
+import { Post } from '../../models/post'
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent implements OnInit {
-  posts = POSTS;
+  posts: Post[];
 
-  constructor() { }
+  constructor(private postService: PostService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.postService.getPostList().subscribe(res => {
+      this.posts = res.map( e => {
+        return {
+          id: e.payload.doc.id,
+          ...e.payload.doc.data() as {}
+        } as Post;
+      })
+    });  
   }
 
+  
 }
