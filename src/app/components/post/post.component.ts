@@ -16,11 +16,11 @@ export class PostComponent implements OnInit {
       this.posts = res.map( e => {
         return {
           id: e.payload.doc.id,
+          ...e.payload.doc.data() as {}
         } as Post;
       })
     });  
   }
 
-  removePost = post => this.postService.deletePost(post);
   
 }
